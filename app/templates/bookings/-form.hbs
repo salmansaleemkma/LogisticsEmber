@@ -1,42 +1,48 @@
-<div class="card small">
-            <form {{action "save" on="submit"}}>
+<form {{action "save" on="submit"}}>
     <h2>{{errorMessage}}</h2>
-<p>
+<div class="row">
+<p class="col s6">
 <label>Name:
 {{input value=model.name}}
 </label>
 </p>
-<p>
-<label>From:
-{{input value=model.from }}
-</label>
-</p>
-<p>
-<label>Destination:
-{{input value=model.to}}
-</label>
-</p>
-<p>
+<p class="col s6">
 <label>Purpose:
 {{input value=model.purpose}}
 </label>
 </p>
-<p>
+</div>
+<div class="row">
+<p class="col s6">
+<label>From:
+{{input value=model.from }}
+</label>
+</p>
+<p class="col s6">
+<label>Destination:
+{{input value=model.to}}
+</label>
+</p>
+</div>
+<div class="row">
+<p class="col s6">
 <label>Distance:
 {{input value=model.requiredkms}}
 </label>
 </p>
-<p>
+<p class="col s6">
 <label>Charges:
 {{input value=model.charges}}
 </label>
 </p>
+</div>
 <p>
 <label>Time:
 {{input value=model.time}}
 </label>
 </p>
-<input class="btn waves-effect waves-light" type="submit" {{action "save"}} value="Save"/>
-<button {{action "cancel"}}>Cancel</button>
+<div class="card-action">
+              <input class="btn waves-effect waves-light" type="submit" {{action "save"}} value="Save"/>
+              <button class="btn waves-effect waves-light" {{action "cancel"}}>Cancel</button>
+            </div>
 </form>
-</div>
