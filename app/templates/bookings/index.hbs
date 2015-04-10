@@ -1,0 +1,28 @@
+<h2>Total Bookings: {{model.length}}</h2>
+<table class="centered bordered hoverable">
+<thead>
+<tr>
+<th data-field="name">Name</th>
+<th data-field="from">From</th>
+<th data-field="to">To</th>
+<th data-field="Purpose">Purpose</th>
+<th data-field="requiredkms">Kilo Meters</th>
+<th data-field="charges">Charges</th>
+<th data-field="time">Time</th>
+</tr>
+</thead>
+{{#each booking in model}}
+<tbody>
+<tr>
+<td>{{booking.name}}</td>
+<td>{{booking.from}}</td>
+<td>{{booking.to}}</td>
+<td>{{booking.purpose}}</td>
+<td>{{booking.requiredkms}}</td>
+<td>Rs.{{booking.charges}}</td>
+<td>{{booking.time}}</td>
+<td><a>edit</a></td>
+</tr>
+</tbody>
+{{/each}}
+</table>

@@ -6,5 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 export default Router.map(function() {
-  this.resource('bookings', function() {});
+  this.resource('bookings', function() {
+    this.route('new');
+  });
 });

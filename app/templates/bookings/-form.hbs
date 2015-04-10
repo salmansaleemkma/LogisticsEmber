@@ -1,0 +1,40 @@
+<form {{action "save" on="submit"}}>
+    <h2>{{errorMessage}}</h2>
+<p>
+<label>Name:
+{{input value=model.name}}
+</label>
+</p>
+<p>
+<label>From:
+{{input value=model.from }}
+</label>
+</p>
+<p>
+<label>Destination:
+{{input value=model.to}}
+</label>
+</p>
+<p>
+<label>Purpose:
+{{input value=model.purpose}}
+</label>
+</p>
+<p>
+<label>Distance:
+{{input value=model.requiredkms}}
+</label>
+</p>
+<p>
+<label>Charges:
+{{input value=model.charges}}
+</label>
+</p>
+<p>
+<label>Time:
+{{input value=model.time}}
+</label>
+</p>
+<input type="submit" value="Save"/>
+<button {{action "cancel"}}>Cancel</button>
+</form>

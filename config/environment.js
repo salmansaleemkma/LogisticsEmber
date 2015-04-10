@@ -19,6 +19,10 @@ module.exports = function(environment) {
     }
   };
 
+  ENV.contentSecurityPolicy = {
+    'connect-src': "'self' http://inventory-projectyapp.c9.io/" 
+  }
+  
   if (environment === 'development') {
     ENV.APP.LOG_RESOLVER = true;
     ENV.APP.LOG_ACTIVE_GENERATION = true;
