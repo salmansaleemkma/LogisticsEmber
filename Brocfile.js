@@ -4,6 +4,10 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 var app = new EmberApp();
 
+app.import('bower_components/materialize/dist/js/materialize.min.js');
+app.import('bower_components/materialize/dist/css/materialize.min.css');
+app.import('bower_components/materialize/dist/font/roboto/Roboto-Light.ttf');
+
 // Use `app.import` to add additional libraries to the generated
 // output files.
 //
