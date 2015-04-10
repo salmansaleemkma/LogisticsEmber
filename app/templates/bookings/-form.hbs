@@ -1,4 +1,4 @@
-<div class="card large">
+<div class="card small">
             <form {{action "save" on="submit"}}>
     <h2>{{errorMessage}}</h2>
 <p>
@@ -36,7 +36,7 @@
 {{input value=model.time}}
 </label>
 </p>
-<input type="submit" value="Save"/>
+<input class="btn waves-effect waves-light" type="submit" {{action "save"}} value="Save"/>
 <button {{action "cancel"}}>Cancel</button>
 </form>
 </div>
