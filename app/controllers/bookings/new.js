@@ -2,15 +2,21 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
     isValid: Ember.computed(
-        'model.email',
-        'model.firstName',
-        'model.lastName',
-        'model.twitter',
+        'model.name',
+        'model.purpose',
+        'model.from',
+        'model.to',
+        'model.requiredkms',
+        'model.charges',
+        'model.time',
         function() {
-            return !Ember.isEmpty(this.get('model.email')) &&
-                !Ember.isEmpty(this.get('model.firstName')) &&
-                !Ember.isEmpty(this.get('model.lastName')) &&
-                !Ember.isEmpty(this.get('model.twitter'));
+            return !Ember.isEmpty(this.get('model.name')) &&
+                !Ember.isEmpty(this.get('model.purpose')) &&
+                !Ember.isEmpty(this.get('model.from')) &&
+                !Ember.isEmpty(this.get('model.to')) &&
+                !Ember.isEmpty(this.get('model.requiredkms')) &&
+                !Ember.isEmpty(this.get('model.charges')) &&
+                !Ember.isEmpty(this.get('model.time'));
         }
     ),
     actions: {
