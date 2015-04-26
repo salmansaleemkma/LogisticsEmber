@@ -21,7 +21,7 @@
 <td>{{booking.requiredkms}} KM</td>
 <td>Rs.{{booking.charges}}</td>
 <td>{{booking.time}}</td>
-<td><a>edit</a></td>
+<td>{{#link-to 'bookings.show' booking}}edit{{/link-to}}</td>
 </tr>
 </tbody>
 {{/each}}
