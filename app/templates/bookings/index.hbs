@@ -20,7 +20,6 @@
 </thead>
 {{#each booking in model}}
 <tbody>
-    {{#link-to 'bookings.show' booking}}
 <tr>
 <div>
 <td>{{booking.name}}</td>
@@ -32,7 +31,6 @@
 <td>{{booking.time}}</td>
 </div>
 </tr>
-{{/link-to}}
 </tbody>
 {{/each}}
 </table>
