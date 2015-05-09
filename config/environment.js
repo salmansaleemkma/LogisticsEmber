@@ -20,7 +20,7 @@ module.exports = function(environment) {
   };
 
   ENV.contentSecurityPolicy = {
-    'connect-src': "'self' http://inventory-projectyapp.c9.io/" 
+    'connect-src': "'self' http://inventory-projectyapp.c9.io/"
   }
   
   if (environment === 'development') {
