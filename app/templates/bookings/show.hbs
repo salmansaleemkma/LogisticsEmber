@@ -1,5 +1,16 @@
-<ul>
+<p><ul>
 <li>Name: {{model.name}}</li>
 <li>Purpose: {{model.purpose}}</li>
-</ul>
+<li>From: {{model.from}}</li>
+<li>Destination: {{model.to}}</li>
+<li>Distance: {{model.requiredkms}}</li>
+<li>Charges:&#8377; {{model.charges}}</li>
+<li>Time: {{model.time}}</li>
+</ul></p>
 <p>(Still Working on this part :P)</p>
+
+<div class="card-action">
+              <button class="btn waves-effect waves-light" {{action 'edit'}}>Edit</button>
+              <input class="btn waves-effect waves-light" type="submit" value="Delete"/>
+              <button class="btn waves-effect waves-light" {{action 'back'}}>Back</button>
+            </div>
