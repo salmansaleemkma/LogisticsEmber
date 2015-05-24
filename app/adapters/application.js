@@ -1,5 +1,5 @@
 import DS from 'ember-data';
 
 export default DS.ActiveModelAdapter.extend({
-    host: 'http://inventory-projectyapp.c9.io'
+    host: 'http://128.199.154.84:5000'
 });
