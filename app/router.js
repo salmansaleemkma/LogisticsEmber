@@ -10,11 +10,11 @@ export default Router.map(function() {
     this.route('new');
 
     this.route('show', {
-      path: ':friend_id'
+      path: ':booking_id'
     });
 
     this.route('edit', {
-      path: ':friend_id/edit'
+      path: ':booking_id/edit'
     });
   });
 });

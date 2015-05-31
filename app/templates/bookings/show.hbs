@@ -1,16 +1,38 @@
-<p><ul>
-<li>Name: {{model.name}}</li>
-<li>Purpose: {{model.purpose}}</li>
-<li>From: {{model.from}}</li>
-<li>Destination: {{model.to}}</li>
-<li>Distance: {{model.requiredkms}}</li>
-<li>Charges:&#8377; {{model.charges}}</li>
-<li>Time: {{model.time}}</li>
-</ul></p>
-<p>(Still Working on this part :P)</p>
+<style>
+span{
+color:grey;
+}
+</style>
+<p>
+<div class="row">
+<h4 class="col s10"><span>Order #</span> 78947382</h4>
+ <p class="col s2">
+ {{link-to "Edit" "bookings.edit" model class="waves-effect waves-red btn right-align"}}</p>
+</div>
+
+<div class="row">
+<h5 class="col s6"><span>Name:</span> {{model.name}}</h5>
+<h5 class="col s6"><span>Purpose:</span> {{model.purpose}}</h5>
+</div>
+
+<div class="row">
+<h5 class="col s6"><span>From:</span> {{model.from}}</h5>
+<h5 class="col s6"><span>Destination:</span> {{model.to}}</h5>
+</div>
+
+<div class="row">
+<h5 class="col s6"><span>Distance:</span> {{model.requiredkms}}</h5>
+<h5 class="col s6"><span>Charges:</span>&#8377; {{model.charges}}</h5>
+</div>
+
+<div class="row">
+<h5 class="col s6"><span>Time:</span> {{model.time}}</h5>
+<h5 class="col s6"><span>Status:</span> Pending</h5>
+</div>
+
+</p>
 
 <div class="card-action">
-              <button class="btn waves-effect waves-light" {{action 'edit'}}>Edit</button>
-              <input class="btn waves-effect waves-light" type="submit" value="Delete"/>
+              <button class="btn waves-effect waves-red" {{action 'delete'}}>Delete</button>
               <button class="btn waves-effect waves-light" {{action 'back'}}>Back</button>
             </div>

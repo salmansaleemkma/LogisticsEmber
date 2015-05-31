@@ -33,8 +33,8 @@ export default Ember.Controller.extend({
         },
         cancel: function() {
             this.transitionToRoute('bookings');
-        return false;
+            return false;
         }
     }
-        
+    
 });
