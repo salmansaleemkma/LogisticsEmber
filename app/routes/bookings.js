@@ -5,6 +5,10 @@ export default Ember.Route.extend({
         return this.store.find('booking');
     },
     actions: {
+	delete: function(booking) {
+	    booking.destroyRecord();
+	    return false;
+	},
         save: function() {
             console.log('+--- save action bubbled up to bookings route');
             return false;
