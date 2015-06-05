@@ -8,6 +8,7 @@ export default Ember.Controller.extend({
 	    booking.destroyRecord().then(function() {
 		_this.transitionTo('bookings.index');
 	    });
+	    return true;
 	},
 	edit:function(booking){
 	    this.transitiionToRoute('bookings.edit',booking);
