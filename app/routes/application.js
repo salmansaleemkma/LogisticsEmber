@@ -1,15 +1,22 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-
+    model: function() {
+	return this.store.find('booking');
+    },
     actions: {
-        save: function() {
-            console.log('+---- save action bubbled up to application route');
-            return true;
-        },
-        cancel: function() {
-            console.log('+---- cancel action bubbled up to application route');
-            return true;
-        }
+	showModal: function(name, model) {
+	    this.render(name, {
+		into: 'application',
+		outlet: 'modal',
+		model: model
+	    });
+	},
+	removeModal: function() {
+	    this.disconnectOutlet({
+		outlet: 'modal',
+		parentView: 'application'
+	    });
+	}
     }
 });
