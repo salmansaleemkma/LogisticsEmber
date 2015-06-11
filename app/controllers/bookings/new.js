@@ -32,9 +32,14 @@ export default Ember.Controller.extend({
             return false;
         },
         cancel: function() {
-            this.transitionToRoute('bookings');
-        return false;
-        }
+	    var _this = this;
+	    var booking = this.get('model');
+	    
+	    booking.destroyRecord().then(function() {
+		_this.transitionTo('bookings');
+	    });
+	    return true;
+	}
     }
         
 });
